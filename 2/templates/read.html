@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read Entries</title>
+</head>
+<body>
+    <h1>Current Entries</h1>
+    {% if entries %}
+        <ul>
+            {% for key, value in entries.items() %}
+                <li>{{ key }} - {{ value }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No entries available.</p>
+    {% endif %}
+</body>
+</html>
